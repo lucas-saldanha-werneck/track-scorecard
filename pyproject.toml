@@ -1,0 +1,22 @@
+[project]
+name = "track-scorecard"
+version = "0.1.0"
+description = "Score multi-object tracker output against ground truth (CLEAR MOT style), offline, stdlib only"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+track-scorecard = "track_scorecard.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["track_scorecard"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
